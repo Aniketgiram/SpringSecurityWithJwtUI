@@ -76,6 +76,13 @@ function App() {
     }
   }
 
+  const handleLogout = () => {
+    setUsername("")
+    setPassword("")
+    setJwt("")
+    setProfile(null)
+    setMessage("Logout successfully")
+  }
   return (
     <>
 
@@ -101,6 +108,7 @@ function App() {
           <h3>User Profile</h3>
           <p>Username: {profile.username}</p>
           <p>Roles: {profile.role.join(",")}</p>
+          <button onClick={handleLogout}>Logout</button>
         </div>
       )}
     </>
